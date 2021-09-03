@@ -1,0 +1,280 @@
+* {
+	
+	margin:0;
+	padding: 0;
+	box-sizing:border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(219, 226, 219, 0.8), rgba(176, 194, 245, 0.8)), url("../img/disposable.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.container {
+	width: 100%;
+	height: 300px;
+	font-size: 20px;
+	font-family:'Noto Serif', serif;
+	font-style: italic;
+	text-align: center; 
+}
+
+/* ------------------------- */
+/* NAVBAR */
+/* ------------------------- */
+
+#ctn-icon-search{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ctn-icon-search i{
+    font-size: 18px;
+    color: #777777;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#ctn-icon-search i:hover{
+    color: #46a2fd;
+}
+
+#ctn-bars-search{
+    top: -10px;
+    width: 100%;
+    background: rgb(121, 120, 120);
+    padding: 10px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#ctn-bars-search input{
+    display: block;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+    outline: 0;
+}
+
+
+.navbar ul li {
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	margin: 0 20px;
+	font-family: 'Noto Serif', serif;
+	font-style: italic;
+}
+
+.navbar ul li a {
+	display: inline-block;
+	padding: 10px 30px;
+	font-size: 18px;
+	margin: -5px;
+	transition: .5s ease all;
+	color:rgb(0, 0, 0);
+	text-decoration: none;
+	text-align: center;
+}
+
+.navbar ul li::before {
+	content: "";
+	height: 3px;
+	width: 0%;
+	background: yellowgreen;
+	position: absolute;
+	left: 0;
+	bottom: -12px;
+	transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before {
+	width: 100%;
+}
+
+/* ------------------------- */
+/* Productos */
+/* ------------------------- */
+.productos {
+	width: auto;
+	box-align: center;	
+	background: #f1f2f4;
+	padding-bottom: 0%;
+	margin: 1rem;
+  	padding: 1rem;
+	margin-bottom: 80px;
+}
+
+.productos .titulo {
+	width: 70%;
+	font-size: 44px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.productos .producto {
+	position: relative;
+	width: 100%;
+}
+
+.productos .overlay {
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background:linear-gradient(30deg, #E2D3C1,#B3BEAD, #8BBA3D);
+	overflow: hidden;
+	transition: .5s ease;
+}
+
+.productos .producto:hover .overlay{
+	width: 100%;
+	opacity: .8;
+}
+
+.productos .producto .overlay-texto {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	white-space: nowrap;
+	color: black;
+	font-size: 18px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	border-top: 1px solid rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.productos .btn-productos {
+	background-color: var(--green-light);
+	color: rgb(0, 0, 0);
+	padding: 7px 20px;
+	text-transform: uppercase;
+	font-size: 16px;
+	border: 2px solid transparent;
+	transition: .3s ease;
+}
+
+.productos .btn-productos:hover {
+	background-color: transparent;
+	border: 2px solid var(--green-light);
+	color: var(--green-light);
+}
+/* ------------------------- */
+/* Separador */
+/* ------------------------- */
+.separador-slogan{
+	text-align: center;
+}
+
+.separador{
+	background-image: url('../img/greenearth.jpg');
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display:block;
+	background-position:unset;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 60px;
+}
+
+.separador p {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	color: rgb(10, 1, 58);
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	-webkit-text-stroke: 0.5px #fff;
+	font-family: 'Noto Serif', serif;
+	padding: 10px;
+}
+
+/* ------------------------- */
+/* Video */
+/* ------------------------- */
+
+.maind {
+	width: 80%;
+	margin: auto;
+	
+}
+
+.maind .h3{
+	text-align: center;
+}
+
+video{
+	width: 100%;
+	border-bottom: 50px;
+}
+
+/* ------------------------- */
+/* Galeria */
+/* ------------------------- */
+.galeria {
+	margin-bottom: 60px;
+}
+
+.galeria img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.contacto {
+	margin-bottom: 60px;
+}
+
+.redes-sociales {
+	padding: 10px;
+	background-color: var(--green-light);
+}
+
+.redes-sociales img {
+	padding: 5px;
+	border-radius: 100%;
+	width: 50px;
+	transition: .3s ease all;
+}
+
+.redes-sociales img:hover {
+	transform: scale(1.2);
+}
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 992px) {
+	p {
+		font-size: 18px;
+	}
+
+	.contenido-header .texto {
+		font-size: 60px;
+	}
+
+	.menu a {
+		font-size: 20px;
+	}
+
+	.nosotros .titulo,
+	.productos .titulo {
+		font-size: 30px;
+	}
+
+}
